@@ -137,4 +137,4 @@ Designer Sense is not intended to make every interface look the same. It is inte
 
 ## Version
 
-Current version: **0.4.0**
+Current version: **0.4.1**
