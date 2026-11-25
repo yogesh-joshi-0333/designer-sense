@@ -1,4 +1,4 @@
-# Designer Sense — evaluation report (v0.2.0)
+# Designer Sense — evaluation report (v0.4.1)
 
 ## What was reviewed
 
@@ -72,3 +72,14 @@ Checks performed for this package:
 ## v0.4.0 research-driven update
 
 The new research material was integrated into `SKILL.md` and documented in `RESEARCH.md`. Structural and package checks were rerun. No fresh model A/B generation study or browser-rendered comparison was performed for this release. The source research informs the process design; it does not constitute empirical evidence that generated designs have improved.
+
+## v0.4.1 review-driven maintenance
+
+- Narrowed the skill description to explicit design critique, visual improvement, and reference-matching requests so routine frontend work remains with the project's existing specialist skills.
+- Made the design brief internal by default; it is shown for new pages, major redesigns, or when requested.
+- Clarified that iteration effort scales with task size rather than requiring multiple rounds for localized fixes.
+- Updated the screenshot helper to use the page `load` event instead of `networkidle`.
+- Restricted the Chrome CLI fallback to Playwright import/browser-launch failures. Navigation and screenshot failures now surface instead of being silently masked.
+- Added explicit warnings when the CLI fallback cannot honour dark-mode or full-page capture.
+
+Validation status for this maintenance update: source changes are committed; no rendered A/B comparison or visual-quality improvement is claimed. Run the helper in an environment with Playwright browsers and in a CLI-fallback environment to verify both paths.
