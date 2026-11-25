@@ -1,6 +1,6 @@
 ---
 name: designer-sense
-description: A style-neutral visual design and design-engineering skill. Use when creating or improving websites, apps, dashboards, components, emails, slides, charts, illustrations, icons, or visual systems; when matching a screenshot, URL, or Figma frame; and for requests like “make this nicer,” “improve the UI,” “this looks AI-made,” or “match this design.” Also use when a task has a meaningful visual-design problem even if the user does not explicitly say “design.” Works across frameworks and aesthetics without prescribing a house style.
+description: A style-neutral visual design judgment skill. Use when the user explicitly asks for a design critique or review, asks to make an interface look better or less AI-generated, or asks to match/recreate a supplied screenshot, URL, or Figma frame. Do not trigger for routine frontend implementation, bug fixes, or ordinary UI changes already handled by a specialised design skill unless the user asks for additional design judgment. Works across frameworks and aesthetics without prescribing a house style.
 ---
 
 # Designer Sense
@@ -15,18 +15,7 @@ Three habits distinguish design work from generic UI generation:
 
 Design sense is educated intuition: perception and taste become more reliable when they are trained through observation, comparison, making, feedback, and reflection. Do not treat “it feels right” as the end of the explanation. Be able to name the visual or experiential reason behind an important choice, while acknowledging when a judgment is subjective or context-dependent.
 
-### The design-sense learning loop
-
-Use this loop during meaningful visual work; do not turn every tiny fix into an exercise:
-
-1. **Notice:** look closely at the subject, interface, references, and context. Ask what catches attention, what feels unresolved, and what is unexpectedly effective.
-2. **Collect:** identify useful references or patterns from relevant work and, where useful, from outside the product category. Record what is worth learning from—not just a screenshot, but the reason it works.
-3. **Deconstruct:** explain the effect through observable variables such as hierarchy, proportion, alignment, rhythm, contrast, type, colour, material, motion, grouping, affordance, and density.
-4. **Reproduce to learn:** when a reference is supplied or a technique is unfamiliar, recreate a small representative part to understand its construction. Treat this as a learning exercise, not permission to copy protected expression or to override a user's originality requirements.
-5. **Adapt:** translate the principle—not the surface styling—to the current audience, task, brand, content, platform, and constraints.
-6. **Judge and reflect:** inspect the result, explain what changed and why, note what did not work, and carry the learning into the next decision.
-
-Ask “How was this made?”, “Why does it work here?”, and “Would it still work for this audience and task?” Curiosity should lead to investigation, not imitation without thought.
+Design judgment improves through observation, making, comparison, and feedback. Use those habits when they help the task; do not turn routine implementation into a learning exercise.
 
 There is no mandatory style, framework, component library, or visual technique. Editorial, brutalist, glass, gradients, dense enterprise UI, playful, corporate, minimal, and experimental directions are all valid when the brief supports them. Avoid unchosen defaults, not specific styles.
 
@@ -44,7 +33,7 @@ Tasks may combine modes. Load the relevant reference before that phase.
 | Solve a visual CSS implementation problem | Build | `references/css-craft.md` |
 | Review without changing code | Judge | `references/judging.md`, `references/critique-rubric.md` |
 
-For a small, localized request, use the lightest version of the process. Do not turn a one-line CSS fix into a full design exercise. For visual creation, improvement, or recreation, still write a compact brief before coding; scale its detail to the task.
+For a small, localized request, use the lightest version of the process. Do not turn a one-line CSS fix into a full design exercise. For substantial visual work, create a compact design brief internally before coding. Show it to the user only for a new page, a major redesign, or when they ask to see the reasoning. For a localized refinement, skip the formal brief and change only what the request requires.
 
 ## 2. Establish the evidence and constraints
 
@@ -61,7 +50,7 @@ When another installed skill or tool is specialized for a required workflow (for
 
 ## 3. Decide: make a compact design brief
 
-Before writing or changing visual code, write a 10–25-line design brief. Keep it concise and task-scaled; for a genuinely trivial one-property fix, a 3-line micro-brief is enough. Show the brief to the user unless they asked for code-only output. It should answer:
+Before substantial visual work, form a concise design brief internally. Show it only for a new page, a major redesign, or when the user asks to see the reasoning. For a targeted component or CSS fix, use a short internal note—or no formal brief when the intent is already clear. It should answer:
 
 1. **Purpose and reader:** who is this for, what must they understand or do?
 2. **Mode:** operate, read, persuade, or experience. This sets the appropriate expression budget:
@@ -172,7 +161,7 @@ These are cross-style requirements, not aesthetic preferences. Treat the numeric
 
 ## 8. Iteration and stop rule
 
-Do 2–3 focused design-and-review rounds for substantial visual work:
+Use iteration proportional to the task. For substantial visual work, plan up to 2–3 focused design-and-review rounds; for a localized fix, make the targeted change and verify it once:
 
 1. First pass: establish the concept, hierarchy, structure, and responsive foundation.
 2. Second pass: fix the highest-severity visual, usability, accessibility, and responsive faults found in the rendered result.
