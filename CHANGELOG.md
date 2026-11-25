@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.1
+
+Review-driven maintenance focused on activation scope and predictable verification.
+
+- Narrowed activation to explicit design critique, visual improvement, and reference-matching requests.
+- Made design briefs internal by default and proportional to task size.
+- Scaled iteration effort to the scope of the change.
+- Updated screenshot capture to wait for page load rather than network idle.
+- Limited fallback to Playwright import or browser-launch failures; page/navigation errors now surface.
+- Added warnings when Chrome CLI fallback cannot provide dark mode or full-page capture.
+
+No controlled with-skill/without-skill design comparison is claimed for this release.
+
 ## 0.4.0
 
 Research-driven enrichment of v0.3.0. Kept the skill style-neutral and cross-stack.
