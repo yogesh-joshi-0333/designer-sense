@@ -91,12 +91,14 @@ This is a learning method, not a mandate to copy references or add unnecessary e
 Run from the root of your project:
 
 ```bash
+mkdir -p .claude/skills
 git clone https://github.com/yogesh-joshi-0333/designer-sense.git .claude/skills/designer-sense
 ```
 
 ### Claude Code — personal
 
 ```bash
+mkdir -p ~/.claude/skills
 git clone https://github.com/yogesh-joshi-0333/designer-sense.git ~/.claude/skills/designer-sense
 ```
 
