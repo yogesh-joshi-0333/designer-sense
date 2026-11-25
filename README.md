@@ -33,7 +33,7 @@ The research process included:
 
 The research notes document what was inspected, what was adopted, and what was deliberately excluded. Selected sources include:
 
-- [Anthropic — Frontend Design skill](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design/skills/frontend-design)
+- [Anthropic — Frontend Design skill](https://github.com/anthropics/skills/tree/main/skills/frontend-design)
 - [Anthropic — Frontend aesthetics cookbook](https://platform.claude.com/cookbook/coding-prompting-for-frontend-aesthetics)
 - [Impeccable](https://github.com/pbakaus/impeccable)
 - [UI Craft](https://github.com/educlopez/ui-craft)
@@ -46,7 +46,7 @@ The research notes document what was inspected, what was adopted, and what was d
 - [MDN — CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [MDN — SVG Filter Element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter)
 
-The full research log is in [RESEARCH.md](RESEARCH.md). It records source-specific findings, adoption decisions, and retrieval limitations. User-provided research notes are preserved separately in [references/external-findings.md](references/external-findings.md).
+The full research log is in [`RESEARCH.md`](RESEARCH.md). It records source-specific findings, adoption decisions, and retrieval limitations. User-provided research notes are preserved separately in [`references/external-findings.md`](references/external-findings.md).
 
 ## The design process
 
@@ -88,33 +88,44 @@ This is a learning method, not a mandate to copy references or add unnecessary e
 
 ### Claude Code — project-local
 
-Copy the extracted repository into your project's skills directory:
+Run from the root of your project:
 
 ```bash
-mkdir -p .claude/skills/designer-sense
-cp -R ./* .claude/skills/designer-sense/
+git clone https://github.com/yogesh-joshi-0333/designer-sense.git .claude/skills/designer-sense
 ```
 
 ### Claude Code — personal
 
 ```bash
-mkdir -p ~/.claude/skills/designer-sense
-cp -R ./* ~/.claude/skills/designer-sense/
+git clone https://github.com/yogesh-joshi-0333/designer-sense.git ~/.claude/skills/designer-sense
 ```
+
+The repository root contains `SKILL.md` and its `references/` directory, so cloning it directly into the skills directory makes the skill available to Claude Code. Start a new session or reload skills if Claude Code was already running.
 
 Then ask Claude Code to use `designer-sense` when designing, implementing, recreating, or reviewing an interface.
 
-## Repository contents
+## Repository structure
 
-The complete v0.4.0 source package—including `SKILL.md`, research notes, references, scripts, test fixtures, and validation report—is available as [designer-sense-v0.4.0.zip](designer-sense-v0.4.0.zip). Extract it to use the full skill.
+```text
+designer-sense/
+├── SKILL.md                 # Core skill instructions
+├── README.md                # Project overview and installation
+├── RESEARCH.md              # Research process and source findings
+├── CHANGELOG.md             # Version history
+├── TEST-REPORT.md           # Validation scope and limitations
+├── LICENSE.txt
+├── references/              # Detailed design knowledge loaded as needed
+├── scripts/                 # Supporting utilities
+└── tests/fixtures/           # Paired evaluation examples
+```
 
 ## Evaluation and current limitations
 
-The release includes paired HTML fixtures and a repeatable evaluation protocol, plus a screenshot helper for inspecting multiple viewport widths.
+The repository includes paired HTML fixtures and a repeatable evaluation protocol. It also includes a screenshot helper for inspecting multiple viewport widths. The files are available directly in this repository; no separate ZIP download is required.
 
 **Be precise about what has and has not been validated:** the current release has passed package-integrity, reference-path, and screenshot-script syntax checks. Earlier source-level reviews were not blind user studies or browser-rendered A/B experiments. A fresh controlled comparison of rendered outputs is still a planned validation step.
 
-See [TEST-REPORT.md](TEST-REPORT.md) in the package for the exact validation status. Do not interpret the existence of test fixtures or a screenshot script as proof of visual superiority.
+See [`TEST-REPORT.md`](TEST-REPORT.md) for the exact validation status. Do not interpret the existence of test fixtures or a screenshot script as proof of visual superiority.
 
 ## Design philosophy
 
